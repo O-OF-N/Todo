@@ -1,0 +1,25 @@
+version: "2.4"
+services:
+  application-server:
+    container_name: application-server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: application-server:latest
+    ports:
+      - "8085:8080"
+    networks:
+      - mdas-ingestion-service-network
+
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    networks:
+      - mdas-ingestion-service-network
+
+networks:
+  mdas-ingestion-service-network:
+    driver: bridge
