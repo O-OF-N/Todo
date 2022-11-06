@@ -1,4 +1,4 @@
-package com.todo.Todo;
+package com.todo.Todo.integration;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
