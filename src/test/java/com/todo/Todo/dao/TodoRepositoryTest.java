@@ -12,7 +12,6 @@ import reactor.core.publisher.Flux;
 import reactor.test.StepVerifier;
 
 @DataMongoTest
-@ExtendWith(SpringExtension.class)
 @TestPropertySource(properties = "spring.mongodb.embedded.version=3.5.5")
 public class TodoRepositoryTest {
 

@@ -2,7 +2,6 @@ package com.todo.Todo.controller;
 
 import com.todo.Todo.model.Item;
 import com.todo.Todo.model.ItemDTO;
-import com.todo.Todo.service.ITodoService;
 import com.todo.Todo.service.TodoServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -18,8 +17,6 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import org.springframework.web.reactive.function.BodyInserters;
 import reactor.core.publisher.Flux;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(SpringExtension.class)
 @WebFluxTest(controllers = TodoController.class)
